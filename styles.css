@@ -16,6 +16,8 @@
   --border-dim: rgba(61, 255, 157, 0.32);
   --max: 1120px;
   --ring: 0 0 0 3px rgba(77, 219, 255, 0.4);
+  /* Sticky header clearance for hash links / scroll-margin (approx. matches .site-header) */
+  --scroll-pad-top: max(5.25rem, calc(env(safe-area-inset-top, 0px) + 4.5rem));
 }
 
 * {
@@ -24,6 +26,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-pad-top);
 }
 
 body {
@@ -555,6 +558,16 @@ img {
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+}
+
+.project-title-link {
+  text-decoration: underline;
+  text-decoration-color: rgba(61, 255, 157, 0.35);
+  text-underline-offset: 3px;
+}
+
+.project-title-link:hover {
+  text-decoration-color: var(--accent);
 }
 
 .tag {

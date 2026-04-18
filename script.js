@@ -81,6 +81,56 @@ function setupActiveNav() {
   sections.forEach((s) => io.observe(s));
 }
 
+function setupSmoothInPageScroll() {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  const durationMs = 680;
+  const easeInOutCubic = (t) =>
+    t < 0.5 ? 4 * t * t * t : 1 - (-2 * t + 2) ** 3 / 2;
+
+  document.documentElement.style.scrollBehavior = "auto";
+
+  document.addEventListener(
+    "click",
+    (e) => {
+      const a = e.target.closest("a");
+      if (!a) return;
+      const href = a.getAttribute("href");
+      if (!href || !href.startsWith("#") || href === "#") return;
+      if (e.defaultPrevented) return;
+      if (e.button !== 0) return;
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+
+      const target = document.querySelector(href);
+      if (!target) return;
+
+      e.preventDefault();
+
+      const header = document.querySelector(".site-header");
+      const headerH = header ? header.getBoundingClientRect().height : 0;
+      const extra = 10;
+      const targetY = target.getBoundingClientRect().top + window.scrollY - headerH - extra;
+      const startY = window.scrollY;
+      const distance = targetY - startY;
+      if (Math.abs(distance) < 1) {
+        history.pushState(null, "", href);
+        return;
+      }
+
+      const t0 = performance.now();
+      function frame(now) {
+        const elapsed = now - t0;
+        const t = Math.min(1, elapsed / durationMs);
+        window.scrollTo(0, startY + distance * easeInOutCubic(t));
+        if (t < 1) requestAnimationFrame(frame);
+        else history.pushState(null, "", href);
+      }
+      requestAnimationFrame(frame);
+    },
+    true,
+  );
+}
+
 function setupRevealOnScroll() {
   const nodes = $$(".reveal");
   if (nodes.length === 0) return;
@@ -107,6 +157,7 @@ function setupRevealOnScroll() {
 }
 
 setupYear();
+setupSmoothInPageScroll();
 setupMobileNav();
 setupActiveNav();
 setupRevealOnScroll();
