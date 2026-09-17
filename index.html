@@ -5,26 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Phu Le — CS student at GMU. Player profile: experience, projects, skills, and contact."
+      content="Phu Le — software engineer and data. CS student at George Mason University."
     />
-    <title>Phu Le | Player One</title>
+    <title>Phu Le</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Syne:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body class="game-site">
+  <body>
     <a class="skip-link" href="#home">Skip to content</a>
 
     <header class="site-header" id="top">
       <nav class="nav container" aria-label="Primary">
-        <a class="brand" href="#home" aria-label="Go to Home">
-          <span class="brand-mark" aria-hidden="true">PL</span>
-          <span class="brand-text">Phu Le</span>
-        </a>
+        <a class="brand" href="#home">Phu Le</a>
 
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
           <span class="sr-only">Toggle navigation</span>
@@ -32,131 +29,87 @@
         </button>
 
         <div class="nav-links" id="nav-links">
-          <a class="nav-link" href="#home">Home</a>
           <a class="nav-link" href="#about">About</a>
           <a class="nav-link" href="#experience">Experience</a>
           <a class="nav-link" href="#projects">Projects</a>
-          <a class="nav-link" href="#skills">Skills</a>
           <a class="nav-link" href="#contact">Contact</a>
         </div>
       </nav>
     </header>
 
     <main>
-      <section class="section hero" id="home">
-        <div class="container hero-grid">
-          <div class="hero-copy reveal">
-            <p class="eyebrow">
-              <span class="pill">Spawn: Chantilly, VA</span>
-              <span class="dot" aria-hidden="true"></span>
-              <span class="muted">Open to co-op & Internships</span>
-            </p>
-            <h1 class="hero-title">Phu Le</h1>
-            <p class="hero-subtitle">Computer Science Student @ George Mason University</p>
-            <p class="hero-tagline">
-              Aspiring Software Engineer passionate about building scalable systems and data-driven
-              applications.
-            </p>
-
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="#projects">Start → Projects</a>
-              <a class="btn btn-ghost" href="#contact">Contact</a>
-            </div>
-
-            <div class="hero-links" aria-label="Quick links">
-              <a class="icon-link" href="https://github.com/phuProjects" target="_blank" rel="noreferrer">
-                <span class="icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
-                    <path
-                      d="M12 2.5a9.5 9.5 0 0 0-3 18.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.1-3.4-1.1-.4-1-1-1.3-1-1.3-.9-.6.1-.6.1-.6 1 0 1.6 1 1.6 1 .9 1.6 2.5 1.1 3.1.9.1-.7.3-1.1.6-1.3-2.2-.3-4.5-1.1-4.5-5a3.9 3.9 0 0 1 1-2.7 3.6 3.6 0 0 1 .1-2.7s.8-.2 2.7 1a9.3 9.3 0 0 1 5 0c1.9-1.2 2.7-1 2.7-1 .5 1.2.2 2.2.1 2.7a3.9 3.9 0 0 1 1 2.7c0 3.9-2.3 4.7-4.5 5 .4.3.7 1 .7 2v3c0 .3.2.6.7.5A9.5 9.5 0 0 0 12 2.5Z"
-                      class="svg-fill"
-                    />
-                  </svg>
-                </span>
-                <span>GitHub</span>
-              </a>
-            </div>
+      <section class="hero" id="home">
+        <div class="container hero-inner">
+          <p class="hero-brand reveal">Phu Le</p>
+          <h1 class="hero-title reveal">Software engineer and data</h1>
+          <p class="hero-lede reveal">
+            Building production software and data systems at George Mason University.
+          </p>
+          <div class="hero-actions reveal">
+            <a class="btn" href="#projects">Projects</a>
+            <a class="btn btn-quiet" href="#contact">Contact</a>
           </div>
-
-          <aside class="hero-card reveal" aria-label="Highlights">
-            <div class="card">
-              <p class="card-kicker">Loadout</p>
-              <ul class="bullets">
-                <li>Scalable systems</li>
-                <li>Data pipelines & analytics</li>
-                <li>Full-stack development</li>
-              </ul>
-              <div class="card-divider" role="presentation"></div>
-              <p class="card-kicker">Current quest</p>
-              <p class="muted">
-                Software Engineer Intern @ Opportunity Knocks HQ (Mar 2026 – Present) · Undergraduate
-                Research Assistant @ ROARS Lab (Jul 2025 – Present)
-              </p>
-            </div>
-          </aside>
         </div>
       </section>
 
       <section class="section" id="about">
-        <div class="container">
-          <div class="section-head reveal">
-            <h2>About</h2>
-            <p class="muted">Backstory — studies and interests.</p>
-          </div>
-
-          <div class="grid-2">
-            <div class="card reveal">
-              <h3>Education</h3>
-              <p>
-                Currently pursuing a <strong>B.S. in Computer Science</strong> (2024–2028) at
-                <strong>George Mason University</strong>.
-              </p>
-              <p class="muted">
-                Coursework: Data Structures, OOP, Linear Algebra, Discrete Math
-              </p>
-            </div>
-            <div class="card reveal">
-              <h3>Interests</h3>
-              <p>
-                I’m interested in <strong>software engineering</strong>, <strong>data systems</strong>,
-                <strong>research</strong>, and <strong>full-stack development</strong>—especially
-                projects that blend strong engineering fundamentals with real-world impact.
-              </p>
-            </div>
-          </div>
+        <div class="container narrow">
+          <h2 class="section-title reveal">About</h2>
+          <p class="reveal">
+            Computer Science student at George Mason University with production experience
+            shipping React and TypeScript features. Focused on full-stack development, data
+            engineering, and applied computer vision.
+          </p>
+          <p class="meta reveal">
+            B.S. Computer Science · Expected May 2028 · Chantilly, VA
+          </p>
         </div>
       </section>
 
       <section class="section" id="experience">
-        <div class="container">
-          <div class="section-head reveal">
-            <h2>Experience</h2>
-            <p class="muted">Completed and active missions.</p>
-          </div>
+        <div class="container narrow">
+          <h2 class="section-title reveal">Experience</h2>
 
-          <div class="timeline">
-            <article class="timeline-item card reveal">
-              <div class="timeline-top">
+          <div class="entries">
+            <article class="entry reveal">
+              <div class="entry-head">
                 <h3>Software Engineer Intern</h3>
-                <p class="muted">Opportunity Knocks HQ · Mar 2026 – Present</p>
+                <p class="meta">Opportunity Knocks HQ · Mar 2026 – Jul 2026</p>
               </div>
-              <ul class="bullets">
-                <li>Built and maintained web app features</li>
-                <li>Improved performance and UX</li>
-                <li>Collaborated with engineers/designers</li>
-                <li>Code reviews and debugging</li>
+              <ul>
+                <li>
+                  Developed React and TypeScript features used by thousands of students,
+                  improving page responsiveness and premium account management.
+                </li>
+                <li>
+                  Collaborated with engineers via GitHub pull requests and code review to
+                  deliver production-ready web features.
+                </li>
+                <li>
+                  Diagnosed and resolved frontend bugs while keeping code clean and reusable.
+                </li>
               </ul>
             </article>
 
-            <article class="timeline-item card reveal">
-              <div class="timeline-top">
+            <article class="entry reveal">
+              <div class="entry-head">
                 <h3>Undergraduate Research Assistant</h3>
-                <p class="muted">ROARS Lab @ GMU · Jul 2025 – Present</p>
+                <p class="meta">ROARS Lab, George Mason University · Jul 2025 – Jun 2026</p>
               </div>
-              <ul class="bullets">
-                <li>Built csconfs-index (inspired by ICLRPts)</li>
-                <li>Processed DBLP + CSRankings data</li>
-                <li>Automated research data pipelines</li>
+              <ul>
+                <li>
+                  Designed and developed csconfs-index, an interactive analytics platform for
+                  measuring research effort across 60+ top CS conferences using DBLP and
+                  CSRankings datasets.
+                </li>
+                <li>
+                  Built Python data pipelines to parse millions of publication records,
+                  normalize conference metadata, and compute research metrics.
+                </li>
+                <li>
+                  Automated data collection, validation, and preprocessing to improve
+                  reproducibility.
+                </li>
               </ul>
             </article>
           </div>
@@ -164,63 +117,60 @@
       </section>
 
       <section class="section" id="projects">
-        <div class="container">
-          <div class="section-head reveal">
-            <h2>Projects</h2>
-            <p class="muted">Side quests you can ask me about.</p>
-          </div>
+        <div class="container narrow">
+          <h2 class="section-title reveal">Projects</h2>
 
-          <div class="cards-grid">
-            <article class="project card reveal">
-              <div class="project-head">
+          <div class="entries">
+            <article class="entry reveal">
+              <div class="entry-head">
                 <h3>
                   <a
-                    class="project-title-link"
                     href="https://roars.dev/csconfs-index/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >csconfs-index</a>
+                    >csconfs-index</a
+                  >
                 </h3>
-                <span class="tag">Web App</span>
+                <p class="meta">React · Python · Oct 2025 – Mar 2026</p>
               </div>
-              <p class="muted">
-                Web app analyzing research effort across CS fields using DBLP + CSRankings data,
-                inspired by ICLRPts.
+              <p>
+                Interactive web app visualizing research effort across 60+ computer science
+                conferences using DBLP and CSRankings datasets, with structured pipelines for
+                reproducible analysis.
               </p>
             </article>
 
-            <article class="project card reveal">
-              <div class="project-head">
-                <h3>
-                  <a
-                    class="project-title-link"
-                    href="https://roars.dev/csconfs/?csrankings=all"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >CSConfs</a>
-                </h3>
-                <span class="tag">Visualization</span>
+            <article class="entry reveal">
+              <div class="entry-head">
+                <h3>SnakeVision</h3>
+                <p class="meta">YOLOv8 · OpenCV · May 2026 – Present</p>
               </div>
-              <p class="muted">
-                Interactive visualization tool with improved UI/UX and React performance.
+              <p>
+                Real-time AI snake detection for smart glasses. Fine-tuned YOLOv8 on 1,500+
+                labeled images and built a live OpenCV inference pipeline for outdoor hazard
+                awareness.
               </p>
             </article>
 
-            <article class="project card reveal">
-              <div class="project-head">
-                <h3>AI Surveillance System</h3>
-                <span class="tag">Computer Vision</span>
-              </div>
-              <p class="muted">YOLOv8 real-time object detection with an automated alert system.</p>
-            </article>
-
-            <article class="project card reveal">
-              <div class="project-head">
+            <article class="entry reveal">
+              <div class="entry-head">
                 <h3>Secure File Transfer System</h3>
-                <span class="tag">Security</span>
+                <p class="meta">Python · AES-256 · Jun 2025</p>
               </div>
-              <p class="muted">
-                AES-256 encrypted client-server system for CLI-based file transfer.
+              <p>
+                Encrypted client-server file transfer over TCP sockets with a CLI, structured
+                error handling, and resumable transfers.
+              </p>
+            </article>
+
+            <article class="entry reveal">
+              <div class="entry-head">
+                <h3>AI Surveillance System</h3>
+                <p class="meta">YOLOv8 · OpenCV · Jul 2025</p>
+              </div>
+              <p>
+                Real-time object detection with automated alerting and configurable cooldown
+                logic to reduce false alarms.
               </p>
             </article>
           </div>
@@ -228,119 +178,52 @@
       </section>
 
       <section class="section" id="skills">
-        <div class="container">
-          <div class="section-head reveal">
-            <h2>Skills</h2>
-            <p class="muted">Tools and technologies I work with.</p>
-          </div>
-
-          <div class="skills-grid">
-            <div class="card reveal">
-              <h3>Languages</h3>
-              <p class="chips">
-                <span class="chip">Python</span><span class="chip">Java</span><span class="chip">C</span
-                ><span class="chip">C++</span><span class="chip">JavaScript</span
-                ><span class="chip">HTML/CSS</span>
-              </p>
+        <div class="container narrow">
+          <h2 class="section-title reveal">Skills</h2>
+          <dl class="skills reveal">
+            <div>
+              <dt>Languages</dt>
+              <dd>Python, JavaScript, C++, Java, C, SQL, HTML/CSS</dd>
             </div>
-            <div class="card reveal">
-              <h3>Frameworks</h3>
-              <p class="chips">
-                <span class="chip">React</span><span class="chip">Django</span>
-              </p>
+            <div>
+              <dt>Frameworks</dt>
+              <dd>React, Django</dd>
             </div>
-            <div class="card reveal">
-              <h3>Databases</h3>
-              <p class="chips">
-                <span class="chip">MySQL</span><span class="chip">PostgreSQL</span>
-              </p>
+            <div>
+              <dt>Data &amp; tools</dt>
+              <dd>PostgreSQL, MySQL, Git, Docker, Linux</dd>
             </div>
-            <div class="card reveal">
-              <h3>Tools</h3>
-              <p class="chips">
-                <span class="chip">AWS</span><span class="chip">Git</span><span class="chip">GitHub</span>
-              </p>
-            </div>
-          </div>
+          </dl>
         </div>
       </section>
 
       <section class="section" id="contact">
-        <div class="container">
-          <div class="section-head reveal">
-            <h2>Contact</h2>
-            <p class="muted">Multiplayer — let’s connect.</p>
-          </div>
-
-          <div class="grid-2">
-            <div class="card reveal">
-              <h3>Reach me</h3>
-              <div class="contact-list">
-                <a class="contact-item" href="mailto:phu3262006@gmail.com">
-                  <span class="icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
-                      <path
-                        d="M4 7.5A3.5 3.5 0 0 1 7.5 4h9A3.5 3.5 0 0 1 20 7.5v9A3.5 3.5 0 0 1 16.5 20h-9A3.5 3.5 0 0 1 4 16.5v-9Z"
-                        class="svg-stroke"
-                        stroke-width="1.6"
-                      />
-                      <path
-                        d="M6.5 8.2 12 12.1l5.5-3.9"
-                        class="svg-stroke"
-                        stroke-width="1.6"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                  <span>phu3262006@gmail.com</span>
-                </a>
-
-                <a class="contact-item" href="tel:+17037867974">
-                  <span class="icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
-                      <path
-                        d="M8.4 3.8 6.8 5.4c-.7.7-.9 1.8-.4 2.7l.8 1.4c.4.8.3 1.7-.3 2.3l-1 1c1.2 2.3 3.1 4.2 5.4 5.4l1-1c.6-.6 1.5-.7 2.3-.3l1.4.8c.9.5 2 .3 2.7-.4l1.6-1.6c.6-.6.6-1.6 0-2.2l-2.2-2.2c-.5-.5-1.3-.6-1.9-.2l-1 .6c-1-.6-1.9-1.3-2.7-2.1-.8-.8-1.5-1.7-2.1-2.7l.6-1c.4-.6.3-1.4-.2-1.9L10.6 3.8c-.6-.6-1.6-.6-2.2 0Z"
-                        class="svg-stroke"
-                        stroke-width="1.6"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                  <span>703-786-7974</span>
-                </a>
-
-                <a
-                  class="contact-item"
-                  href="https://github.com/phuProjects"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span class="icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
-                      <path
-                        d="M12 2.5a9.5 9.5 0 0 0-3 18.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.1-3.4-1.1-.4-1-1-1.3-1-1.3-.9-.6.1-.6.1-.6 1 0 1.6 1 1.6 1 .9 1.6 2.5 1.1 3.1.9.1-.7.3-1.1.6-1.3-2.2-.3-4.5-1.1-4.5-5a3.9 3.9 0 0 1 1-2.7 3.6 3.6 0 0 1 .1-2.7s.8-.2 2.7 1a9.3 9.3 0 0 1 5 0c1.9-1.2 2.7-1 2.7-1 .5 1.2.2 2.2.1 2.7a3.9 3.9 0 0 1 1 2.7c0 3.9-2.3 4.7-4.5 5 .4.3.7 1 .7 2v3c0 .3.2.6.7.5A9.5 9.5 0 0 0 12 2.5Z"
-                        class="svg-fill"
-                      />
-                    </svg>
-                  </span>
-                  <span>github.com/phuProjects</span>
-                </a>
-              </div>
-            </div>
-          </div>
+        <div class="container narrow">
+          <h2 class="section-title reveal">Contact</h2>
+          <ul class="contact-list reveal">
+            <li>
+              <a href="mailto:phu3262006@gmail.com">phu3262006@gmail.com</a>
+            </li>
+            <li>
+              <a href="https://github.com/phuProjects" target="_blank" rel="noreferrer"
+                >GitHub</a
+              >
+            </li>
+            <li>
+              <a href="https://phuprojects.github.io" target="_blank" rel="noreferrer"
+                >phuprojects.github.io</a
+              >
+            </li>
+          </ul>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <div class="container footer-inner">
-        <p class="muted">© <span id="year"></span> Phu Le · Thanks for playing</p>
+      <div class="container narrow">
+        <p>© <span id="year"></span> Phu Le</p>
       </div>
     </footer>
-
-    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
 
     <script src="./script.js"></script>
   </body>

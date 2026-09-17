@@ -27,20 +27,17 @@ function setupMobileNav() {
     else open();
   });
 
-  // Close when clicking a nav link (mobile).
   links.addEventListener("click", (e) => {
     const a = e.target.closest("a");
     if (a) close();
   });
 
-  // Close on escape.
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") close();
   });
 
-  // Close if resizing to desktop.
   window.addEventListener("resize", () => {
-    if (window.matchMedia("(min-width: 821px)").matches) close();
+    if (window.matchMedia("(min-width: 721px)").matches) close();
   });
 }
 
@@ -84,7 +81,7 @@ function setupActiveNav() {
 function setupSmoothInPageScroll() {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-  const durationMs = 680;
+  const durationMs = 620;
   const easeInOutCubic = (t) =>
     t < 0.5 ? 4 * t * t * t : 1 - (-2 * t + 2) ** 3 / 2;
 
@@ -108,8 +105,7 @@ function setupSmoothInPageScroll() {
 
       const header = document.querySelector(".site-header");
       const headerH = header ? header.getBoundingClientRect().height : 0;
-      const extra = 10;
-      const targetY = target.getBoundingClientRect().top + window.scrollY - headerH - extra;
+      const targetY = target.getBoundingClientRect().top + window.scrollY - headerH - 8;
       const startY = window.scrollY;
       const distance = targetY - startY;
       if (Math.abs(distance) < 1) {
